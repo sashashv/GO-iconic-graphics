@@ -1,0 +1,24 @@
+footer{
+  min-height: 90px;
+  background-color: $bg-blue-button;
+  color: $f-white;
+  font-family: $font_opensans;
+  padding: 30px 0;
+  font-size: 14px;
+  line-height: 2;
+  p{
+    text-align: center;
+    &.copyright{
+      span{
+        font-weight: 700;
+      }
+    }
+    &.design{
+      span{
+        font-weight: 700;
+        color: $f-black;
+      }
+  }
+
+  }
+}

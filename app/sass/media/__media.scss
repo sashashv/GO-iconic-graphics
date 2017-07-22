@@ -1,0 +1,23 @@
+@media (max-with: 991px) {
+  header{
+    .logo{
+
+    }
+    .menu{
+      ul{
+        li{
+          &:first-child{
+            a{
+              padding-left: 0;
+            }
+          }
+          &:last-child{
+            a{
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

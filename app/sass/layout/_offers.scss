@@ -1,0 +1,152 @@
+.offers{
+  background-color: $bg-white;
+  padding: 50px 0;
+  .title{
+    font-family: $font-trebuchet;
+    color: $f-title;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+  .box{
+    font-family: $font-futura;
+    max-width: 288px;
+    background-color: $bg-best-value;
+    color: $f-white;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    &.best{
+      -webkit-box-shadow: $box_shadow_black;
+      -moz-box-shadow: $box_shadow_black;
+      box-shadow: $box_shadow_black;
+      position: relative;
+      margin: 0 auto 20px;
+      z-index:2;
+      .white-container{
+        button{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &.standard, &.ultimate{
+      padding: 0;
+      border: 1px solid $offers_border_color;
+      position: absolute;
+      top: 15px;
+      h1{
+        margin: 20px 0;
+      }
+      .white-container{
+        .price{
+          .dollar{
+            left: 65px;
+          }
+        }
+        button{
+          background-color: $bg-blue-button;
+          box-shadow: 0px 3px 0px 0px #13426b;
+        }
+      }
+    }
+    &.standard{
+      left: 87px;
+      background-color: $bg-standart;
+    }
+    &.ultimate{
+      right: 87px;
+      background-color: $bg-ultimate;
+    }
+    h1{
+      font-size: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 25px 0;
+      font-weight: 700;
+    }
+    .white-container{
+      background-color: $bg-white;
+      padding: 0 20px;
+      h2{
+        color: $f-black;
+        font-size: 24px;
+        text-align: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+      }
+      .price{
+        color: $f-black;
+        text-align: center;
+        position: relative;
+        margin-left: -30px;
+        margin-bottom: 20px;
+        .dollar, .month{
+          font-size: 10px;
+          position: absolute;
+          display: inline-block;
+        }
+        .number{
+          font-size: 72px;
+          font-weight: 700;
+        }
+        .dollar{
+          top: 5px;
+          left: 75px;
+          font-weight: 700;
+          font-size: 20px;
+        }
+        .month{
+          bottom: 0;
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+      ul{
+        margin-bottom: 20px;
+        font-family: $font-calibri;
+        font-size: 15px;
+        li{
+          color: $f-offers-ul;
+          font-weight: 700;
+          position: relative;
+          padding: 7px 0 7px 45px;
+          margin-bottom: 2px;
+          &:nth-child(even){
+            background-color: $bg-even;
+          }
+          &:nth-child(odd){
+            background-color: $bg-odd;
+          }
+          @include before-absolute{
+            width: 10px;
+            height: 10px;
+            left: 25px;
+            background: url("../images/arrow.jpg") no-repeat;
+            background-size: 10px 10px;
+          }
+        }
+      }
+      button{
+        background-color: $bg-best-value;
+        outline: none;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border-color: transparent;
+        width: 100%;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        color: $f-white;
+        cursor: pointer;
+        text-transform: uppercase;
+        -webkit-box-shadow: $offers_button_shadow;
+        -moz-box-shadow: $offers_button_shadow;
+        box-shadow: $offers_button_shadow;
+      }
+    }
+  }
+}

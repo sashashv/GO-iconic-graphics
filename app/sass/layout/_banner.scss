@@ -1,0 +1,65 @@
+.banner{
+  color: $f-white;
+  font-family: $font-futura;
+  text-align: center;
+  background-color: $bg-banner;
+  min-height: 585px;
+  background: url("../images/banner.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 150px;
+  @include before-absolute{
+    background-color: rgba(11, 53, 84, 0.7);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  .inner-banner-block{
+    max-width: 900px;
+    margin:auto;
+    position: relative;
+    z-index: 1;
+    p{
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.25;
+      &.main{
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      &.description{
+        max-width: 575px;
+        margin: auto;
+        font-family: $font-calibri;
+        font-size: 20px;
+        font-style: italic;
+        text-shadow: $shadow_white;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+    }
+    button{
+      font-size: 16px;
+      font-family: $font_opensans;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .6);
+      padding: 20px 60px;
+      color: white;
+      text-transform: uppercase;
+      -webkit-transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+      -moz-transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+      -ms-transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+      -o-transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+      transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+      @include on-state{
+        background-color: rgba(255, 255, 255, .4);
+        color: $f-banner-button;
+        border-color: $f-banner-button;
+      }
+    }
+  }
+
+}
